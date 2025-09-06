@@ -31,29 +31,26 @@ It’s designed for private servers like Project Epoch and works entirely with t
 /tftb merge [1-5]  # Set merge window for multi-caster detection
 /tftb list         # List all learned spellIDs
 /tftb reset        # Reset database and cooldowns
+```
 
+---
 
-How It Works
-Listens for SPELL_AURA_APPLIED events targeting your character
+## 🛠️ How It Works
 
-Filters buffs by keyword or learned spellID
+- Listens for SPELL_AURA_APPLIED events targeting your character
+- Filters buffs by keyword or learned spellID
+- Tracks cooldowns per player and per buff to avoid spam
+- Switches to ID-only mode once all keywords are matched
+- Handles buff refreshes and removals to reset cooldowns
+- Uses a merge window to detect multiple casters and send a single generic emote
 
-Tracks cooldowns per player and per buff to avoid spam
+---
 
-Switches to ID-only mode once all keywords are matched
+## 🖥️ Requirements
 
-Handles buff refreshes and removals to reset cooldowns
-
-Uses a merge window to detect multiple casters and send a single generic emote
-
-Requirements
-World of Warcraft 3.3.5a client
-
-Compatible with private servers using standard combat log API
-
-No external libraries required (Ace3, LibStub, XML, etc.)
-
-
+- World of Warcraft 3.3.5a client
+- Compatible with private servers using standard combat log API
+- No external libraries required (Ace3, LibStub, XML, etc.)
 
 ---
 
@@ -79,9 +76,11 @@ Paste any relevant debug lines from the chat window.
 - Server name:
 - Character class/level:
 - Addon version:
+```
 
+---
 
-Credits
-Concept inspired by Thanks For The Buff Revisited
+## 🙏 Credits
 
+Concept inspired by Thanks For The Buff Revisited  
 Developed and adapted by abiwan
