@@ -1,0 +1,8 @@
+## Interface: 30300
+## Title: Thanks For The Buff (TFTB)
+## Notes: Automatically thanks players for buffs (solo, open world only)
+## Author: abiwan
+## Version: 1.0
+## SavedVariables: TFTB_DB
+
+TFTB.lua
