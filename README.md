@@ -32,7 +32,7 @@ Perfect for friendly adventurers who want to show appreciation without spamming 
 
 ## Installation
 
-1. Download the latest release from [GitHub Releases](https://github.com/your-username/your-repo/releases)
+  1. Download the latest release from https://github.com/abiwan/TFTB-Thanks-For-The-Buff---WoW-3.3.5/releases
 2. Extract to your `Interface/AddOns` folder
 3. Launch WoW and type `/tftb` to get started
 
@@ -40,4 +40,5 @@ Perfect for friendly adventurers who want to show appreciation without spamming 
 
 Created by **abiwan**  
 Project Epoch compatible (WoW 3.3.5a)
+
 
