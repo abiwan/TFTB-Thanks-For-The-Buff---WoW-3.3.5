@@ -3,6 +3,9 @@
 Automatically thanks other players for utility buffs applied to you in solo/open-world play.  
 Perfect for friendly adventurers who want to show appreciation without spamming party or raid chat.
 
+> ⚠️ This addon is based on the original idea from [Thanks For The Buff - Revisited](https://www.curseforge.com/wow/addons/thanks-for-the-buff-revisited).  
+> It has been adapted and extended for WoW 3.3.5a and Project Epoch.
+
 ## Features
 
 - Whisper and emote thank-you messages to buff casters
@@ -29,7 +32,7 @@ Perfect for friendly adventurers who want to show appreciation without spamming 
 
 ## Installation
 
-1. Download the latest release from https://github.com/abiwan/TFTB-Thanks-For-The-Buff---WoW-3.3.5/releases
+1. Download the latest release from [GitHub Releases](https://github.com/your-username/your-repo/releases)
 2. Extract to your `Interface/AddOns` folder
 3. Launch WoW and type `/tftb` to get started
 
