@@ -1,86 +1,40 @@
-# TFTB – Thanks For The Buff (WoW 3.3.5a)
+# Thanks For The Buff (TFTB)
 
-TFTB is a lightweight World of Warcraft addon that automatically thanks other players when they apply useful buffs to your character.  
-It’s designed for private servers like Project Epoch and works entirely with the 3.3.5a combat log API.
+Automatically thanks other players for utility buffs applied to you in solo/open-world play.  
+Perfect for friendly adventurers who want to show appreciation without spamming party or raid chat.
 
-> ⚠️ This addon is inspired by the original concept from [Thanks For The Buff Revisited](https://www.curseforge.com/wow/addons/thanks-for-the-buff-revisited), adapted and optimized for modern private server compatibility.
+## Features
 
----
-
-## ✨ Features
-
-- Detects buffs using `COMBAT_LOG_EVENT_UNFILTERED`
-- Filters by keywords and learns spellIDs dynamically
-- Sends directed emotes and whispers to buff casters
+- Whisper and emote thank-you messages to buff casters
+- Learns new buff spellIDs automatically
 - Switches to ID-only mode once all keywords are learned
-- Handles buff refreshes and expirations (SPELL_AURA_REFRESH / REMOVED)
-- Ignores buffs from party/raid members, NPCs, pets, and self
-- Sends generic `/thanks` emote when multiple players buff you simultaneously
-- Fully configurable via slash commands
+- Merge-window logic to avoid duplicate emotes for multi-caster buffs
+- Cooldown system per caster and spell
+- Configurable ignore window after login/reload to avoid thanking inherited buffs
+- Slash commands for full control
 
----
+## Slash Commands
 
-## ⚙️ Slash Commands
+| Command             | Description                                 |
+|---------------------|---------------------------------------------|
+| `/tftb status`      | Show current settings                       |
+| `/tftb debug`       | Toggle debug mode                           |
+| `/tftb whisper`     | Toggle whisper messages                     |
+| `/tftb emotes`      | Toggle emotes                               |
+| `/tftb cd [10-3600]`| Set cooldown in seconds                     |
+| `/tftb merge [1-5]` | Set merge window for multi-caster buffs     |
+| `/tftb ignore [2-10]`| Set ignore window after login/reload       |
+| `/tftb list`        | Show learned spellIDs                       |
+| `/tftb reset`       | Reset all learned data and cooldowns        |
 
-```bash
-/tftb status       # Show current settings
-/tftb debug        # Toggle debug mode
-/tftb whisper      # Toggle whisper messages
-/tftb emotes       # Toggle emotes
-/tftb cd [10-3600] # Set cooldown per player+buff
-/tftb merge [1-5]  # Set merge window for multi-caster detection
-/tftb list         # List all learned spellIDs
-/tftb reset        # Reset database and cooldowns
-```
+## Installation
 
----
+1. Download the latest release from https://github.com/abiwan/TFTB-Thanks-For-The-Buff---WoW-3.3.5/releases
+2. Extract to your `Interface/AddOns` folder
+3. Launch WoW and type `/tftb` to get started
 
-## 🛠️ How It Works
+## Author
 
-- Listens for SPELL_AURA_APPLIED events targeting your character
-- Filters buffs by keyword or learned spellID
-- Tracks cooldowns per player and per buff to avoid spam
-- Switches to ID-only mode once all keywords are matched
-- Handles buff refreshes and removals to reset cooldowns
-- Uses a merge window to detect multiple casters and send a single generic emote
+Created by **abiwan**  
+Project Epoch compatible (WoW 3.3.5a)
 
----
-
-## 🖥️ Requirements
-
-- World of Warcraft 3.3.5a client
-- Compatible with private servers using standard combat log API
-- No external libraries required (Ace3, LibStub, XML, etc.)
-
----
-
-## 🐛 Issue Template (GitHub > Issues > New)
-
-```markdown
-### Bug Description
-
-Describe the issue you're experiencing and what you expected to happen.
-
-### Steps to Reproduce
-
-1. ...
-2. ...
-3. ...
-
-### Debug Output
-
-Paste any relevant debug lines from the chat window.
-
-### Environment
-
-- Server name:
-- Character class/level:
-- Addon version:
-```
-
----
-
-## 🙏 Credits
-
-Concept inspired by Thanks For The Buff Revisited  
-Developed and adapted by abiwan
